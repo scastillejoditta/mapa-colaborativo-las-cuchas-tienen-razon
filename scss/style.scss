@@ -777,11 +777,11 @@ h4
 
 @media (max-width: 569px)
 {
-    h1 { font-size: 3em; }
+    .intro h1 { font-size: 3em; }
     .intro h2 { font-size: 1em; }
-    
-    h2 {
-        font-size: 2.7em; }
+
+    .articulos h2 { font-size: 2.7em; }
+    .negro h2 { font-size: 2.7em; }
 }
 
 @media (max-width: 530px)
@@ -824,13 +824,15 @@ h4
 
 @media (max-width: 442px)
 {
-    h1 { font-size: 2.5em; }
-    h3 {
-        font-size: 1.6em; }
+    .intro h1 { font-size: 2.5em; }
+
+    .articulos h3 { font-size: 1.4em; }
+    .negro h3 { font-size: 1.6em; }
+
 }
 
 @media (max-width: 395px)
 {
-    h2 {
-        font-size: 2.2em; }
+    .articulos h2 { font-size: 2.2em; }
+    .negro h2 { font-size: 2.2em; }
 }
