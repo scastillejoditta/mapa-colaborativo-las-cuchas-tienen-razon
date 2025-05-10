@@ -1,3 +1,4 @@
+/* -------------*/
 /* fuentes locales*/
 
 @font-face {
@@ -12,8 +13,8 @@
     font-family: 'leyenda';
     src: url("../assets/fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Regular.otf"); }
 
-/* -------------*/
 
+/* -------------*/
 /* colores */
 $gris_mutante: #e5e6df;
 $verde_mutante: #92ff64;
@@ -59,6 +60,9 @@ a {
 ul {
     list-style-type: none;
 }
+
+/* -------------*/
+/* menú */
 
 .container-fluid
 {
