@@ -256,15 +256,19 @@ h3 {
   color: #000000;
   letter-spacing: 1px;
   margin-bottom: 0.5em;
+  margin-top: 1.5em;
 }
 
 h4 {
   font-family: "leyenda", sans-serif;
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  padding: 0;
   text-align: left;
   font-size: 1.5em;
   text-transform: uppercase;
   color: #f9ff32;
-  line-height: 100%;
 }
 
 .intro h2 {
@@ -481,6 +485,9 @@ h4 {
   width: 50%;
   text-align: left;
 }
+.articulos__acordion li .texto .titular {
+  margin-top: 0;
+}
 .articulos__acordion li .texto p {
   line-height: 120%;
   color: #000000;
@@ -534,7 +541,6 @@ h4 {
   color: #fff;
   display: block;
   line-height: 150%;
-  margin-top: 2em;
 }
 
 .cierre {
@@ -635,18 +641,20 @@ h4 {
     font-size: 0.6em;
   }
 }
-@media (max-width: 569px) {
-  .intro h1 {
-    font-size: 3em;
-  }
-  .intro h2 {
-    font-size: 1em;
-  }
+@media (max-width: 593px) {
   .articulos h2 {
     font-size: 2.7em;
   }
   .negro h2 {
     font-size: 2.7em;
+  }
+}
+@media (max-width: 549px) {
+  .intro h1 {
+    font-size: 3.1em;
+  }
+  .intro h2 {
+    font-size: 1em;
   }
 }
 @media (max-width: 530px) {
@@ -674,6 +682,12 @@ h4 {
   }
   .negro h3 {
     font-size: 1.6em;
+  }
+  .articulos__acordion {
+    margin-right: 1em;
+  }
+  .articulos__acordion li {
+    height: 31em;
   }
 }
 @media (max-width: 395px) {
