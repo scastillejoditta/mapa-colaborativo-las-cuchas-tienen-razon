@@ -1,0 +1,677 @@
+@charset "UTF-8";
+/* fuentes locales*/
+@font-face {
+  font-family: "texto";
+  src: url("../assets/fonts/Space_Mono/SpaceMono-Regular.ttf");
+}
+@font-face {
+  font-family: "titulos";
+  src: url("../assets/fonts/Denim/Denim-Bold.otf");
+}
+@font-face {
+  font-family: "leyenda";
+  src: url("../assets/fonts/SpaceGrotesk-2.0.0/otf/SpaceGrotesk-Regular.otf");
+}
+/* -------------*/
+/* colores */
+/* -------------*/
+/* inicializar propiedades*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 70px;
+  font-family: "texto", sans-serif;
+}
+
+body p {
+  line-height: 170%;
+}
+
+a {
+  text-decoration: none;
+  color: #FF2800;
+  border-bottom: 2px #FF2800 dotted;
+}
+a:hover {
+  color: #FF2800;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container-fluid {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 8px 60px black;
+  z-index: 2;
+}
+
+.navbar-brand img {
+  width: 160px;
+}
+
+.navbar-brand {
+  border: none;
+}
+
+.navbar-toggler {
+  width: 60px;
+  height: 50px;
+  padding: 5px;
+}
+.navbar-toggler:hover .mLine {
+  stroke: #92ff64;
+}
+.navbar-toggler:hover {
+  border-color: #92ff64;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "titulos", sans-serif;
+  text-transform: uppercase;
+}
+.navbar-nav .nav-item {
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: border-bottom 0.3s linear;
+}
+.navbar-nav .nav-item a {
+  color: black;
+  border-bottom: 4px #fff solid;
+}
+.navbar-nav .nav-item a:hover {
+  color: #92ff64;
+  border-bottom: 4px #92ff64 solid;
+}
+
+.mouse-scroll {
+  display: block;
+}
+
+.mouse-scroll span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  margin: 0 0 3px 5px;
+}
+
+.mouse-scroll .mouse {
+  height: 21px;
+  width: 14px;
+  border-radius: 10px;
+  transform: none;
+  border: 2px solid #fff;
+  top: 170px;
+}
+
+.mouse-scroll .down-arrow-1 {
+  margin-top: 6px;
+}
+
+.mouse-scroll .down-arrow-1, .mouse-scroll .down-arrow-2, .mouse-scroll .down-arrow-3 {
+  animation: mouse-scroll 1s infinite;
+}
+
+.mouse-scroll .down-arrow-1 {
+  animation-delay: 0.1s;
+  animation-direction: alternate;
+}
+
+.mouse-scroll .down-arrow-2 {
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+}
+
+.mouse-scroll .down-arrow-3 {
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+
+.mouse-scroll .mouse-in {
+  height: 5px;
+  width: 2px;
+  display: block;
+  margin: 5px auto;
+  background: #fff;
+  position: relative;
+}
+
+.mouse-scroll .mouse-in {
+  animation: animated-mouse 1.2s ease infinite;
+}
+
+@keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 990px) {
+  .navbar-brand img {
+    width: 140px;
+  }
+  .nav-item a {
+    padding: 0;
+    margin: 0;
+  }
+}
+/* -------------------------------------------- */
+/* ------------ intro ------------------- */
+/* -------------------------------------------- */
+.intro {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 60px 40px;
+  background-color: #f9ff32;
+}
+.intro__texto {
+  width: 50%;
+}
+.intro__texto__entradilla {
+  font-size: 1em;
+  font-family: "leyenda", sans-serif;
+  margin-bottom: 3em;
+}
+.intro__texto__introduccion {
+  margin-top: 1em;
+}
+
+h1 {
+  font-family: "titulos", sans-serif;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-size: 5em;
+  margin-bottom: 0;
+  margin-top: 0.1em;
+  text-align: center;
+  color: #000000;
+}
+
+h2 {
+  font-family: "titulos", sans-serif;
+  font-size: 3.3em;
+  margin-bottom: 1em;
+  margin-top: 0.3em;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "titulos", sans-serif;
+  text-align: left;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-family: "leyenda", sans-serif;
+  text-align: left;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #f9ff32;
+  line-height: 100%;
+}
+
+.intro h2 {
+  font-family: "leyenda", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-align: center;
+  color: #000000;
+}
+
+.intro small, .mapa small {
+  color: #FF2800;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+
+.intro .fecha {
+  font-size: 0.8em;
+}
+
+.descargar__guia {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 5px;
+  width: 205px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 7px;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0.8;
+  transition: all 0.6s;
+  margin-bottom: 5em;
+}
+.descargar__guia img {
+  display: block;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+.descargar__guia small {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+  color: #000000;
+}
+
+.descargar__guia:hover {
+  opacity: 1;
+  transform: translateY(-30px);
+  border: solid 1px #FF2800;
+}
+
+.descargar__guia:hover small {
+  color: #FF2800;
+}
+
+/* -------------------------------------------- */
+/* ------------- Fotografías -------------------- */
+/* -------------------------------------------- */
+.foto_1 {
+  background-image: url("../assets/images/fotomapacuchas.PNG");
+}
+
+.foto_2 {
+  background-image: url("https://mutante.org/especiales/mural-cuchas/evidencias/12.jpeg");
+}
+
+.fotografia {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.fotografia__nota {
+  position: absolute;
+  right: 20px;
+  bottom: 5%;
+  width: 55%;
+  font-family: "texto", sans-serif;
+}
+.fotografia__nota .pie {
+  color: #fff;
+  font-size: 0.8em;
+  text-align: right;
+  background-color: #000;
+  line-height: 120%;
+}
+.fotografia__nota .credito {
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 150%;
+}
+
+/* -------------------------------------------- */
+/* ------------ embed del mapa ------------------- */
+/* -------------------------------------------- */
+.embed {
+  min-height: 100vh;
+  background-color: #f9ff32;
+  border: 2px solid #f9ff32;
+  padding-bottom: 1em;
+  min-width: 100%;
+  max-width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 56.25%;
+}
+.embed__map {
+  position: absolute !important;
+  height: 100% !important;
+  width: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  border: 2px solid #f9ff32;
+}
+
+.articulos {
+  border: 2px solid #f9ff32;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: #f9ff32;
+}
+.articulos__texto {
+  width: 50%;
+  padding-top: 4em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.articulos__texto small {
+  color: #FF2800;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+.articulos__acordion {
+  width: 80%;
+  max-width: 1000px;
+  margin-top: 5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.articulos__acordion li {
+  width: 100%;
+  height: 18em;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 3em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.articulos__acordion li .foto {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+}
+.articulos__acordion li .foto small {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  background-color: #000000;
+  color: #f9ff32;
+  padding-bottom: 3px;
+}
+.articulos__acordion li .col_1 {
+  background-image: url("https://mutante.org/wp-content/uploads/2025/01/Banner-articulo_Banner_Desktop.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top left, top right;
+}
+.articulos__acordion li .col_2 {
+  background-image: url("https://mutante.org/wp-content/uploads/2025/01/Banner-jpg.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom left, top right;
+}
+.articulos__acordion li .col_3 {
+  background-image: url("https://mutante.org/wp-content/uploads/2025/04/Banner_desktop-2-jpg.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom left, top right;
+}
+.articulos__acordion li .col_4 {
+  background-image: url("https://mutante.org/wp-content/uploads/2025/04/Banner_desktop_11zon.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom left, top right;
+}
+.articulos__acordion li .texto {
+  width: 50%;
+  text-align: left;
+}
+.articulos__acordion li .texto p {
+  line-height: 120%;
+  color: #000000;
+}
+.articulos__acordion li .texto .fecha {
+  color: #FF2800;
+  font-style: italic;
+}
+.articulos__acordion li:hover {
+  transform: translateX(-30px);
+  background-color: #fff;
+}
+.articulos__acordion li:hover .foto {
+  border-right: solid 10px #92ff64;
+}
+.articulos__acordion li:hover .foto small {
+  color: #000000;
+  background-color: #f9ff32;
+}
+.articulos__acordion li:hover h3 {
+  color: #000000;
+}
+.articulos__acordion li:hover .fecha, .articulos__acordion li:hover p {
+  color: #000;
+}
+
+.negro {
+  min-width: 100%;
+  min-height: 100vh;
+  padding-bottom: 8em;
+  border: 2px solid #000000;
+  background-color: #000000;
+}
+.negro__texto {
+  width: 50%;
+  padding-top: 4em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.negro__texto h2, .negro__texto h3, .negro__texto h4, .negro__texto h5 {
+  color: #f9ff32;
+}
+.negro__texto h5 {
+  display: inline;
+  font-family: "titulos", sans-serif;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+.negro__texto p {
+  color: #fff;
+  display: block;
+  line-height: 150%;
+  margin-top: 2em;
+}
+
+.cierre {
+  margin-bottom: 7em;
+  margin-top: 0;
+}
+
+.creditos {
+  text-align: center;
+  line-height: 180%;
+  margin-bottom: 7em;
+  margin-top: 0;
+}
+.creditos div, .creditos p {
+  color: #f9ff32;
+}
+
+.colofon {
+  text-transform: uppercase;
+}
+
+.fondofinal {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url("../assets/images/banner_cuchas.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+}
+.fondofinal__negro {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background: linear-gradient(to bottom, black 0%, transparent 70%);
+  opacity: 1;
+  background-repeat: no-repeat;
+}
+
+/* -------------------------------------------- */
+/* ------------ Breakpoints ------------------- */
+/* -------------------------------------------- */
+@media (max-width: 1000px) {
+  .articulos__acordion {
+    width: 90%;
+  }
+}
+@media (max-width: 970px) {
+  .intro__texto, .articulos__texto, .negro__texto {
+    width: 80%;
+  }
+}
+@media (max-width: 880px) {
+  .articulos__acordion {
+    margin-right: 1em;
+  }
+  .articulos__acordion li {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 35em;
+  }
+  .articulos__acordion li .foto {
+    width: 100%;
+    height: 60%;
+  }
+  .articulos__acordion li .texto {
+    width: 100%;
+    height: 40%;
+  }
+  .intro h1 {
+    font-size: 4em;
+  }
+}
+@media (max-width: 682px) {
+  .fotografia {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    max-height: 60vh;
+    background-position: left;
+  }
+}
+@media (max-width: 730px) {
+  .intro__texto, .articulos__texto, .negro__texto {
+    width: 95%;
+  }
+  .fotografia__nota {
+    width: 95%;
+    bottom: 5px;
+  }
+  .fotografia__nota .pie {
+    font-size: 0.6em;
+  }
+}
+@media (max-width: 569px) {
+  h1 {
+    font-size: 3em;
+  }
+  .intro h2 {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 2.7em;
+  }
+}
+@media (max-width: 530px) {
+  .articulos__acordion li .foto {
+    height: 50%;
+  }
+  .articulos__acordion li .texto {
+    height: 50%;
+  }
+}
+@media (max-width: 485px) {
+  .articulos__acordion li .foto {
+    height: 40%;
+  }
+  .articulos__acordion li .texto {
+    height: 60%;
+  }
+}
+@media (max-width: 442px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+}
+@media (max-width: 395px) {
+  h2 {
+    font-size: 2.2em;
+  }
+}/*# sourceMappingURL=style.css.map */
