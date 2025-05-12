@@ -38,6 +38,7 @@ body
 {
     padding-top: 70px;
     font-family: 'texto', sans-serif;
+    background-color: $amarillo;
 }
 
 body p 
@@ -454,7 +455,7 @@ h4
     background-color: $amarillo;
     border: 2px solid $amarillo;
     padding-bottom:1em;
-    min-width:100%; 
+    width:100%; 
     max-width:100%; 
     position:relative; 
     top:0;
@@ -765,8 +766,6 @@ h4
 
 @media (max-width: 880px)
 {
-   
-    
     .intro h1
     { 
         font-size: 4em; 
@@ -806,6 +805,13 @@ h4
 {
     .articulos h2 { font-size: 2.7em; }
     .negro h2 { font-size: 2.7em; }
+    .embed 
+    {
+        max-width: 90%;
+        width: 90%;
+        min-height: 85vh;
+        height: 85vh;
+    }
 }
  
 
