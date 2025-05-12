@@ -307,7 +307,6 @@ h3
 {
     font-family: 'titulos', sans-serif;
     text-align: left;
-    font-size: 1.7em;
     text-transform: uppercase;
     color: $negro;
     letter-spacing: 1px;
@@ -480,11 +479,7 @@ h4
     min-width:100%;
     min-height: 100vh;
     background-color: $amarillo;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
     padding: 0 20px;
-    background-color: $amarillo;
 
     &__texto
      {
@@ -533,6 +528,7 @@ h4
                     padding: 0;
                     background-size: cover;
                     background-position: center;
+
                     small
                     {
                         position: absolute;
@@ -586,6 +582,11 @@ h4
                     {
                         margin-top: 0;
                         font-size: 1.2em;
+                        font-family: 'titulos', sans-serif;
+                        text-align: left;
+                        text-transform: uppercase;
+                        color: $negro;
+                        letter-spacing: 1px;
                     }
 
                     p {
@@ -632,9 +633,10 @@ h4
 {
     min-width:100%;
     min-height: 100vh;
-    padding-bottom: 8em;
+   //adding-bottom: 8em;
     border: 2px solid $negro;
     background-color: $negro;
+    padding: 0 20px;
 
     &__texto
      {
@@ -708,7 +710,6 @@ h4
         opacity: 1;
         background-repeat: no-repeat;
     }
-
 }
 
 /* -------------------------------------------- */
@@ -810,7 +811,7 @@ h4
 
 @media (max-width: 549px)
 {
-    .intro h1 { font-size: 3.1em; }
+    .intro h1 { font-size: 3.5em; }
     .intro h2 { font-size: 1em; }
 }
 
@@ -854,9 +855,9 @@ h4
 
 @media (max-width: 442px)
 {
-    .intro h1 { font-size: 2.5em; }
+    .intro h1 { font-size: 3em; }
     .intro h2 { margin-top:0.5em; }
-    .intro__texto__introduccion
+    .intro__texto__entradilla
     {
          font-size: 0.8em;
     }

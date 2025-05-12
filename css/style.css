@@ -254,7 +254,6 @@ h2 {
 h3 {
   font-family: "titulos", sans-serif;
   text-align: left;
-  font-size: 1.7em;
   text-transform: uppercase;
   color: #000000;
   letter-spacing: 1px;
@@ -408,11 +407,7 @@ h4 {
   min-width: 100%;
   min-height: 100vh;
   background-color: #f9ff32;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
   padding: 0 20px;
-  background-color: #f9ff32;
 }
 .articulos__texto {
   width: 50%;
@@ -496,6 +491,11 @@ h4 {
 .articulos__acordion li .texto .titular {
   margin-top: 0;
   font-size: 1.2em;
+  font-family: "titulos", sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 1px;
 }
 .articulos__acordion li .texto p {
   line-height: 120%;
@@ -527,9 +527,9 @@ h4 {
 .negro {
   min-width: 100%;
   min-height: 100vh;
-  padding-bottom: 8em;
   border: 2px solid #000000;
   background-color: #000000;
+  padding: 0 20px;
 }
 .negro__texto {
   width: 50%;
@@ -663,7 +663,7 @@ h4 {
 }
 @media (max-width: 549px) {
   .intro h1 {
-    font-size: 3.1em;
+    font-size: 3.5em;
   }
   .intro h2 {
     font-size: 1em;
@@ -687,12 +687,12 @@ h4 {
 }
 @media (max-width: 442px) {
   .intro h1 {
-    font-size: 2.5em;
+    font-size: 3em;
   }
   .intro h2 {
     margin-top: 0.5em;
   }
-  .intro__texto__introduccion {
+  .intro__texto__entradilla {
     font-size: 0.8em;
   }
   .articulos h3 {
